@@ -268,6 +268,43 @@ FlashPlayerConfigBuilder::FlashPlayerConfigBuilder(void)
 	m_supportedConfigs["15.0.0.152_winax"].precompNamesHeaderSize = 0x0c;
 	// ================= end of 15_0_0_152 ======================================
 
+	// ================= start of 15_0_0_223 ======================================
+	m_supportedConfigs["15.0.0.223_winax"].versionStr = "WIN 15,0,0,223";
+	m_supportedConfigs["15.0.0.223_winax"].versionStrRVA = 0xB9E7F4;
+	m_supportedConfigs["15.0.0.223_winax"].setInterpRVA = 0x6ADFA7;
+	m_supportedConfigs["15.0.0.223_winax"].verifyOnCallRVA = 0x6AD9F1;
+	m_supportedConfigs["15.0.0.223_winax"].byteArrayVTableRVA = 0xC89B98;
+	m_supportedConfigs["15.0.0.223_winax"].stringVTableRVA = 0xC89958;
+	m_supportedConfigs["15.0.0.223_winax"].m_flash_version= VER_15;
+	m_supportedConfigs["15.0.0.223_winax"].methodInfoOffsetInMethodEnv = 0x8;
+	m_supportedConfigs["15.0.0.223_winax"].traitsOffsetInMethodInfo = 0x10;
+	m_supportedConfigs["15.0.0.223_winax"].traitsOffsetInScope      = 0xC;
+	m_supportedConfigs["15.0.0.223_winax"].invokerOffsetInMethodInfo = 0x8;
+	m_supportedConfigs["15.0.0.223_winax"].abcInfoPosOffsetInMethodInfo = 0x1c;
+	m_supportedConfigs["15.0.0.223_winax"].flagsOffsetInMethodInfo = 0x30;
+	m_supportedConfigs["15.0.0.223_winax"].poolOffsetInMethodInfo = 0x18;
+	m_supportedConfigs["15.0.0.223_winax"].methodIdOffsetInMethodInfo = 0x20;
+	m_supportedConfigs["15.0.0.223_winax"].posTypeOffsetInTraits = 0x81;
+	m_supportedConfigs["15.0.0.223_winax"].initOffsetInTraits = 0x50;
+	m_supportedConfigs["15.0.0.223_winax"].stringLengthOffset = 0x10;
+	m_supportedConfigs["15.0.0.223_winax"].stringBufferOffset = 0x8;
+	// In Adobe 15.x.x.x ByteArray memory layout is different from version 11.
+	m_supportedConfigs["15.0.0.223_winax"].byteArrayOffsetInByteArrayObject= 0x10;
+	m_supportedConfigs["15.0.0.223_winax"].bufferOffsetInByteArray      = 0x28;
+	m_supportedConfigs["15.0.0.223_winax"].dataOffsetInByteArrayBuffer  = 0x8;
+	m_supportedConfigs["15.0.0.223_winax"].countOffsetInByteArrayBuffer = 0x10;
+	m_supportedConfigs["15.0.0.223_winax"].traitsPosOffsetOffsetInTraits = 0x58;
+	m_supportedConfigs["15.0.0.223_winax"].namespaceOffsetInTraits = 0x44;
+	m_supportedConfigs["15.0.0.223_winax"].nameOffsetInTraits = 0x48;
+	m_supportedConfigs["15.0.0.223_winax"].uriOffsetInNamespace = 0xc;
+	m_supportedConfigs["15.0.0.223_winax"].methodsOffsetInPoolObject = 0x88;
+	m_supportedConfigs["15.0.0.223_winax"].methodNameIndicesOffsetInPoolObject = NULL;
+	m_supportedConfigs["15.0.0.223_winax"].precompNamesOffsetInPoolObject = 0x50;
+	m_supportedConfigs["15.0.0.223_winax"].namespacesOffsetInNamespaceSet = 0x8;
+	m_supportedConfigs["15.0.0.223_winax"].multinameSize = 0x10;
+	m_supportedConfigs["15.0.0.223_winax"].precompNamesHeaderSize = 0x0c;
+	m_supportedConfigs["15.0.0.223_winax"].debugBuild = false;
+
 	m_currentConfig = NULL;
 }
 
