@@ -145,7 +145,6 @@ FlashPlayerConfigBuilder::FlashPlayerConfigBuilder(void)
 	m_supportedConfigs["11.1.102.62_win_sa"].multinameSize = 0x10;
 	m_supportedConfigs["11.1.102.62_win_sa"].precompNamesHeaderSize = 0xc;
 	m_supportedConfigs["11.1.102.62_win_sa"].debugBuild = false;
-
 	m_supportedConfigs["11.1.102.62_winax"].versionStr = "WIN 11,1,102,62";
 	m_supportedConfigs["11.1.102.62_winax"].versionStrRVA = 0x68443C;
 	m_supportedConfigs["11.1.102.62_winax"].setInterpRVA = 0x4BFD87;
@@ -162,6 +161,7 @@ FlashPlayerConfigBuilder::FlashPlayerConfigBuilder(void)
 	m_supportedConfigs["11.1.102.62_winax"].traitsOffsetInMethodInfo = 0x10;
 	m_supportedConfigs["11.1.102.62_winax"].poolOffsetInMethodInfo = 0x18;
 	m_supportedConfigs["11.1.102.62_winax"].abcInfoPosOffsetInMethodInfo = 0x1c;
+
 	m_supportedConfigs["11.1.102.62_winax"].methodIdOffsetInMethodInfo = 0x20;
 	m_supportedConfigs["11.1.102.62_winax"].flagsOffsetInMethodInfo = 0x34;
 	m_supportedConfigs["11.1.102.62_winax"].initOffsetInTraits = 0x4c;
@@ -177,6 +177,41 @@ FlashPlayerConfigBuilder::FlashPlayerConfigBuilder(void)
 	m_supportedConfigs["11.1.102.62_winax"].multinameSize = 0x10;
 	m_supportedConfigs["11.1.102.62_winax"].precompNamesHeaderSize = 0xc;
 	m_supportedConfigs["11.1.102.62_winax"].debugBuild = false;
+
+
+	// ================= 11.3.300.257 ======================================
+	m_supportedConfigs["11.3.300.257_winax"].versionStr = "WIN 11,3,300,257";
+	m_supportedConfigs["11.3.300.257_winax"].versionStrRVA = 0x70FAC8;
+	m_supportedConfigs["11.3.300.257_winax"].setInterpRVA = 0x53A987;
+	m_supportedConfigs["11.3.300.257_winax"].verifyOnCallRVA = 0x53AFDD;
+	m_supportedConfigs["11.3.300.257_winax"].byteArrayVTableRVA = 0x7DA510;
+	m_supportedConfigs["11.3.300.257_winax"].bufferOffsetInByteArray      = 0x10;
+	m_supportedConfigs["11.3.300.257_winax"].dataOffsetInByteArrayBuffer  = 0x20;
+	m_supportedConfigs["11.3.300.257_winax"].countOffsetInByteArrayBuffer = 0x28;
+	m_supportedConfigs["11.3.300.257_winax"].stringVTableRVA = 0x7DA4D4;
+	m_supportedConfigs["11.3.300.257_winax"].stringBufferOffset = 0x8;
+	m_supportedConfigs["11.3.300.257_winax"].stringLengthOffset = 0x10;
+	m_supportedConfigs["11.3.300.257_winax"].methodInfoOffsetInMethodEnv = 0x8;
+	m_supportedConfigs["11.3.300.257_winax"].invokerOffsetInMethodInfo = 0x8;
+	m_supportedConfigs["11.3.300.257_winax"].traitsOffsetInMethodInfo = 0x10;
+	m_supportedConfigs["11.3.300.257_winax"].poolOffsetInMethodInfo = 0x18;
+	m_supportedConfigs["11.3.300.257_winax"].abcInfoPosOffsetInMethodInfo = 0x1c;
+	m_supportedConfigs["11.3.300.257_winax"].methodIdOffsetInMethodInfo = 0x20;
+	m_supportedConfigs["11.3.300.257_winax"].flagsOffsetInMethodInfo = 0x34;
+	m_supportedConfigs["11.3.300.257_winax"].initOffsetInTraits = 0x50;
+	m_supportedConfigs["11.3.300.257_winax"].traitsPosOffsetOffsetInTraits = 0x58;
+	m_supportedConfigs["11.3.300.257_winax"].posTypeOffsetInTraits = 0x81;
+	m_supportedConfigs["11.3.300.257_winax"].namespacesOffsetInNamespaceSet = 0x8;
+	m_supportedConfigs["11.3.300.257_winax"].nameOffsetInTraits = 0x48;
+	m_supportedConfigs["11.3.300.257_winax"].methodsOffsetInPoolObject = 0x88;
+	m_supportedConfigs["11.3.300.257_winax"].methodNameIndicesOffsetInPoolObject = NULL;
+	m_supportedConfigs["11.3.300.257_winax"].precompNamesOffsetInPoolObject = 0x50;
+	m_supportedConfigs["11.3.300.257_winax"].uriOffsetInNamespace = 0xc;
+	m_supportedConfigs["11.3.300.257_winax"].namespaceOffsetInTraits = 0x44;
+	m_supportedConfigs["11.3.300.257_winax"].multinameSize = 0x10;
+	m_supportedConfigs["11.3.300.257_winax"].precompNamesHeaderSize = 0x0c;
+	m_supportedConfigs["11.3.300.257_winax"].debugBuild = false;
+	// ================= end of 11.3.300.257 ======================================
 
 	m_currentConfig = NULL;
 }
