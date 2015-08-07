@@ -25,6 +25,15 @@ namespace WINDOWS
 	#include <Windows.h>
 }
 
+typedef enum _FLASH_VERSION
+{
+	VER_10= 10,
+	VER_11= 11,
+	VER_15= 15,
+	VER_16= 16,
+	VER_17= 17,
+}FLASH_VERSION;
+
 typedef struct Config {
 	IMG img;
 	UINT32 loadOffset;
@@ -38,6 +47,7 @@ typedef struct Config {
 	UINT32 versionStrRVA;
 
 	UINT32 byteArrayVTableRVA;
+	UINT32 byteArrayOffsetInByteArrayObject;
 	UINT32 bufferOffsetInByteArray;
 	UINT32 dataOffsetInByteArrayBuffer;
 	UINT32 countOffsetInByteArrayBuffer;
@@ -50,6 +60,7 @@ typedef struct Config {
 
 	UINT32 invokerOffsetInMethodInfo;
 	UINT32 traitsOffsetInMethodInfo;
+	UINT32 traitsOffsetInScope;
 	UINT32 poolOffsetInMethodInfo;
 	UINT32 abcInfoPosOffsetInMethodInfo;
 	UINT32 methodIdOffsetInMethodInfo;
@@ -72,7 +83,7 @@ typedef struct Config {
 
 	UINT32 multinameSize;
 	UINT32 precompNamesHeaderSize;
-
+	FLASH_VERSION m_flash_version;
 	bool debugBuild;
 } Config;
 

@@ -223,13 +223,11 @@ UINT32* ASMethodInfo::getTraitsPtr()
 
 	UINT32* declaringScopeOrTraits = (UINT32*)m_methodInfo[m_config->traitsOffsetInMethodInfo/4];
 
-	if ((UINT32)declaringScopeOrTraits & 1)
-	{
+	if ((UINT32)declaringScopeOrTraits & 1){
 		declaringScopeOrTraits = (UINT32*)((UINT32)declaringScopeOrTraits & ~1);
-		return (UINT32*)declaringScopeOrTraits[2];
+		return (UINT32*)declaringScopeOrTraits[m_config->traitsOffsetInScope/4];//[2];
 	}
-	else
-	{
+	else{
 		return declaringScopeOrTraits;
 	}
 }

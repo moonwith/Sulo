@@ -338,7 +338,13 @@ VOID ImageLoad(IMG img, VOID *v)
 	RTN_Close(setInterp);
 
 	RTN_Open(verifyOnCall);
-	RTN_InsertCall(verifyOnCall, IPOINT_AFTER, (AFUNPTR)JITedMethodVerified, IARG_REG_VALUE, REG_EAX, IARG_END);
+	RTN_Open(verifyOnCall);
+	if(config->m_flash_version == VER_15){
+		RTN_InsertCall(verifyOnCall, IPOINT_AFTER, (AFUNPTR)JITedMethodVerified, IARG_REG_VALUE, REG_ECX, IARG_END);
+	}
+	else{
+		RTN_InsertCall(verifyOnCall, IPOINT_AFTER, (AFUNPTR)JITedMethodVerified, IARG_REG_VALUE, REG_EAX, IARG_END);
+	}
 	RTN_Close(verifyOnCall);
 
 	// Register TraceCalls to be called to instrument instructions
