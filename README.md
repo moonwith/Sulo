@@ -13,6 +13,8 @@ The following Flash Player builds are supported:
 * 10.3.181.23 ActiveX
 * 11.1.102.62 standadlone non-debug
 * 11.1.102.62 ActiveX
+* 11.3.300.257 ActiveX
+* 15.0.0.152 ActiveX
 
 You can add support for another Flash Player build by specifying some RVAs and offsets in `FlashPlayerConfigBuilder.cpp`.
 
